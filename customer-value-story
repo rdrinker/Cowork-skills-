@@ -1,0 +1,66 @@
+---
+name: customer-value-story
+description: |
+  Turns a customer problem statement (typed description OR attached file) into a structured
+  "Customer Value Story" — a narrative arc plus a ranked value-pattern matrix mapped to a
+  standard KPI taxonomy, with Microsoft and non-Microsoft solution approaches kept distinct.
+  Use when user asks to "create a Customer Value Story", "build a value story for this customer",
+  "develop a value story", "/customer-value-story", "turn this problem statement into a value
+  story", or pastes/attaches a customer problem and wants applicable value patterns + analysis.
+  Do NOT use to produce a finished deck or document as the goal (use pptx/docx — this skill
+  OFFERS them at the end), for citation-backed market research (use deep-research), or for
+  stakeholder messaging (use stakeholder-comms).
+cowork:
+  category: analysis
+  icon: Lightbulb
+---
+
+## Overview
+This skill develops a Customer Value Story on demand: the user provides a problem statement
+and background (as text or a file), and the skill returns a customer-centric value narrative
+followed by a ranked Value Pattern × Industry Matrix view and KPI mapping. It optimizes for
+customer value creation, never product-first mapping, and builds on the framework in the
+built-in value-pattern-matrix-discovery skill. Designed for repeatable use across industries.
+
+## When to Use
+- The user shares a customer problem/background (typed or attached) and wants the applicable
+  value patterns and analysis packaged as a value story.
+- The user is preparing to advise, sell to, or scope a solution for a customer after a meeting.
+- The user wants a reusable, structured opportunity view they can build on across sessions.
+
+## When NOT to Use
+- The deliverable itself is the goal artifact — a polished deck/document → use pptx / docx.
+- External, citation-backed market research → use deep-research.
+- Drafting an executive/stakeholder message → use stakeholder-comms.
+- Pure calendar, email, or meeting tasks → use the relevant productivity skill.
+
+## Personas & Depth (ask per run, then adapt)
+1. Executive advisor — strategic framing, outcomes, prioritization; light on tooling.
+2. Seller / account — business pains, stakeholder relevance, buying signals, positioning.
+3. Solution exploration — problem decomposition, capability mapping, implementation.
+4. Transformation workshop — process friction, current vs. future state, KPI definitions.
+
+## Core Instructions
+Step 1: Ingest the problem (Glob input/**/* and grounding/**/*; Read the file; or use inline text).
+Step 2: Confirm industry + quick persona check (AskUserQuestion).
+Step 3: Ask 2–4 sharpening questions if framing is too broad.
+Step 4: Produce the story (narrative → ranked patterns → matrix cell(s) → KPI overlay →
+        pressure-test questions → confidence).
+Step 5: Offer a docx brief or pptx slide; generate only on yes; save to output/.
+
+## Output Format
+1. Narrative arc — Situation · Challenge · Applicable Value Patterns · Expected Outcomes.
+2. Ranked patterns — table by need/recurrence/impact, tagged universal/AI-growth/operational/industry-specific.
+3. Matrix cell(s) — Value Pattern · Business Problem · Industry Expression · Trigger/Pain Signals ·
+   Common Solution Patterns · Microsoft Capabilities · Non-Microsoft approaches · KPI Mapping ·
+   Measurable outcomes · Pressure-test questions.
+4. KPI overlay — KPI category → how patterns move it.
+5. Strategic pressure-test questions (3).
+6. Confidence — 0–100 with basis; unknowns marked as open assumptions.
+
+## Guardrails
+- Problem before product; patterns over feature lists.
+- Microsoft vs non-Microsoft stay distinct; Safety, Security, Compliance stay separate.
+- Don't fabricate — mark unknowns as open assumptions.
+- Confirm industry if missing; sharpen when too broad.
+- Inline first, files on request; reusable framing.
