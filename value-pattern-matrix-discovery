@@ -1,0 +1,171 @@
+Help me create a personal Cowork skill named `value-pattern-matrix-discovery`.
+
+I want you to build this as a custom Cowork skill and save it as a `SKILL.md` in my OneDrive Cowork skills folder so it is available in a new conversation.
+
+## Goal of the skill
+This skill should guide discovery of a **Value Pattern × Industry Matrix** so I can enter an industry or business type and then work through the matrix in a structured, strategic way.
+
+The skill should help me:
+1. identify the most important value patterns for a selected industry or business type
+2. prioritize those patterns by **need / recurrence / impact**
+3. apply **optimized depth guidelines by conversation persona**
+4. include **both Microsoft and common non-Microsoft solution patterns**
+5. map outputs to a **standard KPI taxonomy**
+6. challenge oversimplified framing with a small number of sharpening questions
+7. produce reusable matrix components that I can build on across conversations
+
+## Required default assumptions
+Unless I explicitly override them, the skill should assume:
+- the organizing model is a **Value Pattern × Industry Matrix**
+- we are optimizing for **customer value creation**, not product-first mapping
+- both **Microsoft** and **common non-Microsoft** solution approaches should be included
+- the KPI taxonomy must include:
+  - Cost
+  - Time / Speed
+  - Quality
+  - Revenue / Growth
+  - Experience
+  - Safety
+  - Security
+  - Compliance / Controls
+  - Reliability / Availability
+  - Productivity / Capacity
+- internal enterprise and operations can be treated as separate business types when useful
+
+## Required conversation personas and depth guidelines
+The skill must support these personas and adapt depth accordingly:
+
+### 1. Executive advisor
+Optimize for:
+- strategic framing
+- measurable business outcomes
+- business prioritization
+- decision considerations
+Keep technical detail light unless requested.
+
+### 2. Seller / account conversation
+Optimize for:
+- business pains
+- stakeholder relevance
+- likely buying signals
+- measurable outcomes
+- solution positioning
+Keep implementation detail moderate.
+
+### 3. Solution exploration
+Optimize for:
+- problem decomposition
+- solution patterns
+- Microsoft capability mapping
+- non-Microsoft alternatives
+- implementation considerations
+Use moderate-to-high detail.
+
+### 4. Transformation workshop
+Optimize for:
+- process friction
+- current vs future state
+- cross-functional dependencies
+- KPI definitions
+- prioritization logic
+Use the deepest detail level.
+
+## Required workflow for the skill
+The skill should run this sequence:
+
+1. Determine the user’s objective for this pass:
+   - breadth scan
+   - selected industry deep dive
+   - selected pattern deep dive
+   - known business problem mapping
+
+2. Determine the conversation persona and apply the right depth guideline.
+
+3. Ask for the industry or business type if not already provided.
+
+4. Produce a ranked shortlist of value patterns for that industry or business type.
+   For each pattern, explain:
+   - why it matters in that industry
+   - likely urgency / recurrence
+   - expected impact class
+   - whether it is:
+     - universal
+     - AI-growth
+     - operational
+     - industry-specific
+
+5. After a pattern is selected, build one or more matrix cells using this structure:
+   - Value Pattern
+   - Business Problem
+   - Industry Expression
+   - Trigger / Pain Signals
+   - Common Solution Patterns
+   - Microsoft Capabilities
+   - Common non-Microsoft approaches
+   - KPI Taxonomy Mapping
+   - Typical measurable outcomes
+   - Strategic questions to pressure-test the opportunity
+
+6. If the user’s framing appears too broad or oversimplified, challenge it with **2–4 sharpening questions** before finalizing the matrix cell.
+
+7. Present outputs in a concise, structured format suitable for reuse.
+
+## Required output modes
+The skill must support three output modes:
+
+### Short output
+- top patterns ranked
+- 1 matrix cell fully built
+- 3 sharpening questions
+
+### Standard output
+- top 5 patterns ranked
+- 1–2 matrix cells fully built
+- KPI mapping table
+- strategic challenge questions
+
+### Deep output
+- top 8–10 patterns ranked
+- 3 matrix cells
+- cross-industry analogs
+- Microsoft and non-Microsoft solution mapping
+- KPI taxonomy overlay
+- open assumptions and next questions
+
+## Guardrails
+The skill must follow these rules:
+- do **not** jump straight to products before clarifying the business problem
+- prefer **reusable solution patterns** over feature lists
+- clearly distinguish **Microsoft** approaches from **non-Microsoft** approaches
+- keep **Safety**, **Security**, and **Compliance** separate; do not collapse them into generic “risk”
+- if I provide a known business problem, start there instead of forcing a generic industry scan
+- if I do not specify an industry, ask which industry or business type we want to dig into
+
+## Trigger phrases that should activate the skill
+Include trigger phrases such as:
+- build the matrix for healthcare
+- start with banking
+- show the top value patterns for manufacturing
+- map this business problem into the matrix
+- expand this industry view
+- challenge my assumptions
+- build the value-pattern matrix for operations
+- prioritize the patterns for internal enterprise
+
+## Required SKILL.md contents
+Create the skill with:
+1. a correct YAML frontmatter section
+2. the exact skill name `value-pattern-matrix-discovery`
+3. a strong description that helps Cowork know when to use it
+4. the full workflow instructions above
+5. clear persona depth logic
+6. the KPI taxonomy
+7. the output mode definitions
+8. the guardrails
+
+## What I want you to do now
+1. Draft the full `SKILL.md`
+2. Show it to me in chat for quick review
+3. Refine it if needed
+4. Save the final version as my personal Cowork skill
+5. Tell me the best 3 test prompts to use in a **new conversation** to validate it
